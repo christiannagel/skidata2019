@@ -6,17 +6,16 @@ namespace AwaitSample
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-        //    ShowThreadInfo("main");
-        //    Task<string> t1 = GreetingAsync("Stephanie", 3000);
+            //ShowThreadInfo("main");
+            //string s1 = await GreetingAsync("Stephanie", 3000);
 
-        //    ShowThreadInfo("after first GreetingAsync");
-        //    Task<string> t2 = GreetingAsync("Matthias", 2000);
-        //    Console.WriteLine("started GreetingAsync");
+            //ShowThreadInfo("after first GreetingAsync");
+            //string s2= await GreetingAsync("Matthias", 2000);
+            //Console.WriteLine("started GreetingAsync");
 
-        //    await Task.WhenAll(t1, t2);
-        //    Console.WriteLine(t1.Result);
+
 
             Runner();
             Console.WriteLine("completed");
@@ -25,9 +24,13 @@ namespace AwaitSample
 
         public static async void Runner()
         {
+            Task outerTask;
             try
             {
-                await ThrowAfterAsync(1000);
+                Task t1 =  ThrowAfterAsync("one", 3000);
+                Task t2 =  ThrowAfterAsync("two", 1000);
+                outerTask = Task.WhenAll(t2, t1);
+                await outerTask;
             }
             catch (Exception ex)
             {
@@ -57,18 +60,18 @@ namespace AwaitSample
             return $"Hello, {name}";
         }
 
-        public static Task ThrowAfterAsync(int ms)
+        public static Task ThrowAfterAsync(string title, int ms)
         {
             return Task.Run(() =>
             {
-                ThrowAfter(ms);
+                ThrowAfter(title, ms);
             });
         }
 
-        public static void ThrowAfter(int ms)
+        public static void ThrowAfter(string title, int ms)
         {
             Thread.Sleep(ms);
-            throw new Exception("bad bad bad");
+            throw new Exception($"{title}: bad bad bad");
         }
     }
 }
