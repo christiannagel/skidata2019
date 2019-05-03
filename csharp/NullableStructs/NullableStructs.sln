@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableStructs", "NullableStructs\NullableStructs.csproj", "{51AC3085-E070-4D19-AE63-A73FF56F8290}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51AC3085-E070-4D19-AE63-A73FF56F8290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51AC3085-E070-4D19-AE63-A73FF56F8290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51AC3085-E070-4D19-AE63-A73FF56F8290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51AC3085-E070-4D19-AE63-A73FF56F8290}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D633CCFD-7CD8-4C9F-A8B2-F1B2CB5DA2B5}
+	EndGlobalSection
+EndGlobal
