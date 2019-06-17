@@ -4,6 +4,10 @@
 
 * 20486, Chapter 1 - Exploring ASP.NET Core MVC
 * 20486, Chapter 2 - Designing ASP.NET Core MVC Web Applications
+* 20486, Chapter 3 - Configuring Middleware and Services in ASP.NET Core
+* [OWin and Katana](https://docs.microsoft.com/en-us/aspnet/aspnet/overview/owin-and-katana/)
+* [Kestrel](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/?view=aspnetcore-2.2)
+* [Azure Pack](http://download.microsoft.com/download/9/b/4/9b42f2a5-9c1d-47c6-ab37-ddbd78f5d15e/windows_azure_pack_datasheet.pdf)
 
 * Plan the application layers
   * Plan data access; plan for separation of concerns, appropriate use of models, views, controllers, components, and service dependency injection; 
@@ -94,6 +98,9 @@
 
 ## Design the user experience
 
+* 20486, Chapter 5 - Developing Views
+* 20486, Chapter 6 - Developing Models
+
 * Create elements of the user interface for a web application 
   * Create and apply styles by using CSS; 
   * structure and lay out the user interface by using HTML; 
@@ -120,6 +127,10 @@
   * define and implement a strategy for working with mobile browsers
 
 ## Develop the user experience
+
+* 20486, Chapter 4 - Developing Controllers
+* 20486, Chapter 5 - Developing Views
+* 20486, Chapter 6 - Developing Models
 
 * Plan for search engine optimization and accessibility 
   * Use analytical tools to parse HTML; 
@@ -157,6 +168,8 @@
   * use AutoRest to build clients
 
 ## Troubleshoot and debug web applications
+
+* 20486, Chapter 3 - Configuring Middleware and Services in ASP.NET Core
 
 * Prevent and troubleshoot runtime issues 
   * Troubleshoot performance, security, and errors; implement tracing, logging, and debugging including IntelliTrace; 
