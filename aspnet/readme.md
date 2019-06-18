@@ -70,6 +70,9 @@
 
 ## Design the build and deployment architecture
 
+* 20486, Chapter 9 - Client-Side Development
+* 20486, Chapter 10 - Testing and Troubleshooting
+
 * Design a browser artifact build strategy
   * Design a JavaScript build pipeline using Gulp, Grunt, npm and Bower; 
   * design an artifact build strategy using Less, Sass and Font Awesome; 
@@ -98,8 +101,11 @@
 
 ## Design the user experience
 
+* 20486, Chapter 2 - Designing ASP.NET Core MVC Web Applications
 * 20486, Chapter 5 - Developing Views
 * 20486, Chapter 6 - Developing Models
+* 20486, Chapter 8 - Using Layouts, CSS and JavaScript in ASP.NET Core MVC
+* 20486, Chapter 9 - Client-Side Development
 
 * Create elements of the user interface for a web application 
   * Create and apply styles by using CSS; 
@@ -170,6 +176,7 @@
 ## Troubleshoot and debug web applications
 
 * 20486, Chapter 3 - Configuring Middleware and Services in ASP.NET Core
+* 20486, Chapter 10 - Testing and Troubleshooting
 
 * Prevent and troubleshoot runtime issues 
   * Troubleshoot performance, security, and errors; implement tracing, logging, and debugging including IntelliTrace; 
@@ -198,6 +205,8 @@
   * interact directly with remote Azure websites using Server Explorer
 
 ## Design and implement security
+
+* 20486, Chapter 11, Managing Security
 
 * Configure authentication 
   * Authenticate users; 
