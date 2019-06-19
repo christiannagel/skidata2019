@@ -37,7 +37,13 @@ namespace AuthWithDotnetCore
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<IdentityUser>(options =>
+            {
+                options.User = new UserOptions { RequireUniqueEmail = false };
+                options.SignIn = new SignInOptions { RequireConfirmedEmail = true, RequireConfirmedPhoneNumber = false };
+                options.Password = new PasswordOptions { RequireDigit = true, RequiredLength = 24, RequiredUniqueChars = 5 };
+            })
+            //services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
