@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPISample</name>
+    </assembly>
+    <members>
+        <member name="M:WebAPISample.Controllers.BooksController.GetBook(System.Int32)">
+            <summary>
+            Returns a book specified by the id
+            </summary>
+            <param name="id">id of the book</param>
+            <returns>a book</returns>
+        </member>
+    </members>
+</doc>
