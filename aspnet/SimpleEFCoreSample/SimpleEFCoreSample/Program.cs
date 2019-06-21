@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace SimpleEFCoreSample
 {
@@ -8,6 +9,22 @@ namespace SimpleEFCoreSample
         {
             CreateTheDatabase();
             AddRecords();
+            SqlInjection("wrox; drop table ..");
+        }
+
+        private static void SqlInjection(string publisher)
+        {
+            using (var context = new BooksContext())
+            {
+                context.Books.FromSql($"select * from books where publisher = {publisher}");  // no sql injection
+
+
+                string sql = $"select * from books where publisher = {publisher}";
+                var result = context.Books.FromSql(sql); // sql injection!!!
+
+                FormattableString sql2 = $"select * from books where publisher = {publisher}";
+                context.Books.FromSql(sql2); // no sql injection
+            }
         }
 
         private static void AddRecords()

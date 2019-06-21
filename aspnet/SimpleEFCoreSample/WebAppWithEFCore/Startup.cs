@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SimpleEFCoreSample;
+using WebAppWithEFCore.Services;
 
 namespace WebAppWithEFCore
 {
@@ -32,6 +33,8 @@ namespace WebAppWithEFCore
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
+            services.AddTransient<IBooksService, BooksService>();
 
             services.AddDbContext<BooksContext>(options =>
             {

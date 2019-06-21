@@ -42,9 +42,13 @@ namespace AuthWithDotnetCore
                 options.User = new UserOptions { RequireUniqueEmail = false };
                 options.SignIn = new SignInOptions { RequireConfirmedEmail = true, RequireConfirmedPhoneNumber = false };
                 options.Password = new PasswordOptions { RequireDigit = true, RequiredLength = 24, RequiredUniqueChars = 5 };
+
+               
             })
             //services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

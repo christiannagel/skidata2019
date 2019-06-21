@@ -6,22 +6,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SimpleEFCoreSample;
+using WebAppWithEFCore.Services;
 
 namespace WebAppWithEFCore.Controllers
 {
     public class BooksController : Controller
     {
         private readonly BooksContext _context;
+        private readonly IBooksService _booksService;
 
-        public BooksController(BooksContext context)
+
+        public BooksController(IBooksService booksService, BooksContext context)
         {
             _context = context;
+            _booksService = booksService;
         }
 
         // GET: Books
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Books.ToListAsync());
+            return View(await _booksService.GetBooksAsync());
         }
 
         // GET: Books/Details/5
